@@ -1428,6 +1428,11 @@ button.btn--link::before {
 }
 @media (max-width: 420px) {
   .header__wts {
+    /*display: none;*/
+  }
+}
+@media (max-width: 420px) {
+  .title__where_we_are {
     display: none;
   }
 }
@@ -4489,18 +4494,6 @@ h6 span {
   gap: 24px;
   width: 100%;
 }
-@media (max-width: 480px) {
-  .tabs-content__wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    padding-bottom: 30px;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
-  }
-}
 
 .card-price {
   background-color: var(--black);
@@ -4943,27 +4936,75 @@ h6 span {
 }
 @media (max-width: 480px) {
   .card-price {
-    width: 280px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 280px;
-    flex: 0 0 280px;
-    padding: 40px 20px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a a" "c c" "b b";
   }
-  .card-price__title {
-    margin-bottom: 24px;
+  .card-price__tariff {
+    margin-top: 80px;
+  }
+  .card-price__summ {
+    text-align: left;
   }
   .card-price__summ span {
-    font-size: 2.1rem;
+    font-size: 3rem;
+  }
+  .card-price.card-price--category .card-price__summ {
+    margin-bottom: 0px;
+  }
+  .card-price.card-price--category .card-price__summ-del {
+    text-align: left;
+  }
+  .card-price__btn {
+    margin-top: 46px;
   }
   .card-price__btn .btn {
-    display: block;
-    padding: 16px;
+    display: inline;
+    padding: 16px 36px;
+  }
+  .card-price__left {
+    padding: 0 30px 20px 0;
+  }
+  .card-price__right {
+    padding: 0 0 20px 0;
   }
   .card-price__img {
-    right: 0;
-    opacity: 0.1;
-    bottom: 120px;
-    right: -70px;
+    bottom: 40px;
+    right: 20px;
+  }
+  .card-price > .hero-category__img {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  .card-price > .hero-category__title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  .card-price > .hero-category__body {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  .card-price > .card-price__title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  .card-price > .card-price__body {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  .card-price > .card-price__tariff {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
   }
 }
 .prices {
