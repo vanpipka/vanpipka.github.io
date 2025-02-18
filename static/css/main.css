@@ -1369,6 +1369,7 @@ button.btn--link::before {
 }
 @media (max-width: 720px) {
   .header__row {
+    flex-wrap: nowrap;
     padding-top: 20px;
   }
 }
@@ -2160,6 +2161,7 @@ button.btn--link::before {
 }
 .mobile-nav__menu {
   height: 100%;
+  padding-top: 100pt;
   overflow-y: auto;
   padding-left: 40px;
   padding-right: 40px;
